@@ -5,14 +5,20 @@ let gridBorder = document.querySelector('.gridBorder');
 function createFirstGrid() {
     for (let i = 0; i < 256; i++) {
         divSquares = document.createElement('div');
-        divSquares.classList.add('divSquare');
+        divSquares.classList.add('divSquareOne');
         gridBorder.appendChild(divSquares);
     }
-
-
     //console.log
-
-
 }
 
-createDivSquares();
+//Create 24x24 grid
+function createSecondGrid(){
+    for (let i = 0; i < 576; i++){
+        divSquares = document.createElement('div');
+        divSquares.classList.add('divSquareTwo');
+        gridBorder.appendChild(divSquares);
+    }
+}
+
+//createFirstGrid();
+createSecondGrid();

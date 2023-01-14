@@ -45,8 +45,14 @@ h1 {
     justify-content: center;
 }
 
-.divSquare {
+.divSquareOne {
     width: 31px;
     height: 31px;
+    border: 2px solid grey;
+}
+
+.divSquareTwo {
+    width: 20.67px;
+    height: 20.67px;
     border: 2px solid grey;
 }
