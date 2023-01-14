@@ -45,6 +45,16 @@ h1 {
     justify-content: center;
 }
 
+.buttonSelector {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.buttonSelector button {
+    padding: 6px;
+}
+
 .divSquareOne {
     width: 31px;
     height: 31px;
@@ -62,3 +72,4 @@ h1 {
     height: 15.5px;
     border: 1px solid grey;
 }
+
