@@ -12,13 +12,23 @@ function createFirstGrid() {
 }
 
 //Create 24x24 grid
-function createSecondGrid(){
-    for (let i = 0; i < 576; i++){
+function createSecondGrid() {
+    for (let i = 0; i < 576; i++) {
         divSquares = document.createElement('div');
         divSquares.classList.add('divSquareTwo');
         gridBorder.appendChild(divSquares);
     }
 }
 
+//Create 32x32 grid
+function createThirdGrid() {
+    for (let i = 0; i < 1024; i++) {
+        divSquares = document.createElement('div');
+        divSquares.classList.add('divSquareThree');
+        gridBorder.appendChild(divSquares);
+    }
+}
+
 //createFirstGrid();
-createSecondGrid();
+//createSecondGrid();
+createThirdGrid();

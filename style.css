@@ -56,3 +56,9 @@ h1 {
     height: 20.67px;
     border: 2px solid grey;
 }
+
+.divSquareThree {
+    width: 15.5px;
+    height: 15.5px;
+    border: 1px solid grey;
+}
