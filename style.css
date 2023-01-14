@@ -23,8 +23,8 @@ h1 {
 
 .gridBorder {
     border: 2px solid black;
-    width: 564px;
-    height: 564px;
+    width: 500px;
+    height: 500px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -46,7 +46,7 @@ h1 {
 }
 
 .divSquare {
-    width: 35px;
-    height: 35px;
+    width: 31px;
+    height: 31px;
     border: 2px solid grey;
 }
