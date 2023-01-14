@@ -1,0 +1,52 @@
+html {
+    box-sizing: border-box;
+}
+
+html body {
+    font-family: 'Times New Roman', Times, serif
+}
+
+body {
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.gridBorder {
+    border: 2px solid black;
+    width: 484px;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+#parentContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 42rem;
+    margin-top: 2rem;
+}
+
+.Instructions {
+    display: flex;
+    justify-content: center;
+}
+
+.divSquare {
+    width: 32px;
+    height: 32px;
+    border: 2px solid grey;
+}
