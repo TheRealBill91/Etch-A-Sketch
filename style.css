@@ -21,6 +21,11 @@ body {
 h1 {
     display: flex;
     justify-content: center;
+    background-color: white;
+    margin: 0;
+    padding: 16px 2px;
+    color: rgb(148, 154, 229);
+    
 }
 
 .gridBorder {
@@ -39,7 +44,7 @@ h1 {
     align-items: center;
     width: auto;
     height: 42rem;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
 }
 
 .Instructions {
