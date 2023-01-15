@@ -16,6 +16,7 @@ function initializeFirstGrid() {
         gridBorder.appendChild(divSquares);
     }
     //console.log
+
 }
 
 function createFirstGrid() {
@@ -39,6 +40,7 @@ function createFirstGrid() {
     }
 
     initializeFirstGrid();
+    handleSmallGridMouseover();
 }
 
 //Create 24x24 grid
@@ -72,6 +74,7 @@ function createSecondGrid() {
     }
 
     initializeSecondGrid();
+    handleMediumGridMouseover();
 
 }
 //Create 32x32 grid
@@ -104,31 +107,89 @@ function createThirdGrid() {
     }
 
     initializeThirdGrid();
+    handleLargeGridMouseover();
 
 }
 
-function sixteenGridListener() {
+function handleSmallGridButton() {
     const sixteenButton = document.querySelector('.sixteenButton');
     sixteenButton.addEventListener('click', createFirstGrid);
 
 }
 
-function twentyFourGridListener() {
+function handleMediumGridButton() {
     const twentyFourButton = document.querySelector('.twentyFourButton');
     twentyFourButton.addEventListener('click', createSecondGrid);
 
 }
 
-function thirtyTwoGridListener(){
+function handleLargeGridButton() {
     const thirtyTwoButton = document.querySelector('.thirtyTwoButton');
-    thirtyTwoButton.addEventListener('click', createThirdGrid )
+    thirtyTwoButton.addEventListener('click', createThirdGrid)
+}
+
+function handleSmallGridMouseover() {
+    let divSquareOne = document.querySelectorAll('.divSquareOne');
+    if (divSquareOne.length !== 0) {
+        console.log(divSquareOne.length);
+        divSquareOne.forEach(divSquareOne =>
+            divSquareOne.addEventListener('mouseover', smallGridEventChange));
+    } else {
+        return;
+    }
+}
+
+function smallGridEventChange(event) {
+    let randomColor = returnRandomColor();
+    this.style.backgroundColor = randomColor;
+}
+
+function handleMediumGridMouseover() {
+    let divSquareTwo = document.querySelectorAll('.divSquareTwo');
+    if (divSquareTwo.length !== 0) {
+        console.log(divSquareTwo.length);
+        divSquareTwo.forEach(divSquareTwo => divSquareTwo.addEventListener('mouseover', mediumGridEventChange))
+    } else {
+        return
+    }
+}
+
+function mediumGridEventChange(event) {
+    let randomColor = returnRandomColor();
+    this.style.backgroundColor = randomColor;
+}
+
+function handleLargeGridMouseover() {
+    let divSquareThree = document.querySelectorAll('.divSquareThree');
+    if (divSquareThree.length !== 0) {
+        console.log(divSquareThree.length);
+        divSquareThree.forEach(divSquareThree => divSquareThree.addEventListener('mouseover', largeGridEventChange))
+    } else {
+        return
+    }
+}
+
+function largeGridEventChange(event){
+    let randomColor = returnRandomColor();
+    this.style.backgroundColor = randomColor;
 }
 
 
 
+
+function returnRandomColor() {
+    const varietyOfColors = ['blue', 'green', 'brown', 'purple', 'black',];
+    let randomIndex = Math.floor(Math.random() * 5);
+    return varietyOfColors[randomIndex];
+}
+
 initializeFirstGrid();
 //createSecondGrid();
 //createThirdGrid();
-sixteenGridListener();
-twentyFourGridListener();
-thirtyTwoGridListener();
+handleSmallGridButton();
+handleMediumGridButton();
+handleLargeGridButton();
+// handleSmallGridMouseover();
+// handleMediumGridMouseover();
+
+//console.log(divSquares.length);

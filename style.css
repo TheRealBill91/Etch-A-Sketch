@@ -3,7 +3,9 @@ html {
 }
 
 html body {
-    font-family: 'Times New Roman', Times, serif
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(168, 173, 231);
+
 }
 
 body {
@@ -58,18 +60,21 @@ h1 {
 .divSquareOne {
     width: 31px;
     height: 31px;
-    border: 2px solid grey;
+    border: 1px solid grey;
+    border: 1px solid rgb(84, 84, 84);
+    background-color: rgb(227, 227, 227);
 }
 
 .divSquareTwo {
     width: 20.67px;
     height: 20.67px;
-    border: 2px solid grey;
+    border: 1px solid rgb(84, 84, 84);
+    background-color: rgb(227, 227, 227);
 }
 
 .divSquareThree {
     width: 15.5px;
     height: 15.5px;
-    border: 1px solid grey;
+    border: 1px solid rgb(84, 84, 84);
+    background-color: rgb(227, 227, 227);
 }
-
