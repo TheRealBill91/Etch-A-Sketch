@@ -15,7 +15,8 @@ function initializeFirstGrid() {
         divSquares.classList.add('divSquareOne');
         gridBorder.appendChild(divSquares);
     }
-    //console.log
+    
+    handleSmallGridMouseover();
 
 }
 
@@ -184,8 +185,6 @@ function returnRandomColor() {
 }
 
 initializeFirstGrid();
-//createSecondGrid();
-//createThirdGrid();
 handleSmallGridButton();
 handleMediumGridButton();
 handleLargeGridButton();
