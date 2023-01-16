@@ -3,7 +3,7 @@ html {
 }
 
 html body {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Courier New', Courier, monospace;
     background-color: rgb(168, 173, 231);
 
 }
@@ -38,8 +38,10 @@ h1 {
     justify-content: center;
     align-items: center;
     width: auto;
-    height: 42rem;
+    height: 34rem;
     margin-top: 2rem;
+    gap: 24px;
+    margin-top: 6rem;
 }
 
 .Instructions {
@@ -47,34 +49,88 @@ h1 {
     justify-content: center;
 }
 
-.buttonSelector {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-}
 
 .buttonSelector button {
-    padding: 6px;
+    padding: 16px;
 }
 
 .divSquareOne {
     width: 31px;
     height: 31px;
-    border: 1px solid grey;
-    border: 1px solid rgb(84, 84, 84);
+    /* border: 1px solid grey; */
+    border: 1px solid rgb(63, 63, 63);
     background-color: rgb(227, 227, 227);
 }
 
 .divSquareTwo {
     width: 20.67px;
     height: 20.67px;
-    border: 1px solid rgb(84, 84, 84);
+    border: 1px solid rgb(63, 63, 63);
     background-color: rgb(227, 227, 227);
 }
 
 .divSquareThree {
     width: 15.5px;
     height: 15.5px;
-    border: 1px solid rgb(84, 84, 84);
+    border: 1px solid rgb(63, 63, 63);
     background-color: rgb(227, 227, 227);
+}
+
+.buttonGridSelectors {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+    height: 400px;
+    
+}
+
+.buttonColorSelector button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    width: 84px;
+    height: 40px;
+    font-size: 16px;
+    border: 2px solid black;
+
+}
+
+
+.buttonGridSelectors button {
+    padding: 6px;
+    border: 2px solid black;
+    border-radius: 8px;
+    width: 75px;
+    height: 40px;
+    background-color: rgb(226, 226, 226);
+    font-size: 16px;
+}
+
+.greenButtonSelector {
+    background-color: rgb(69, 179, 69);
+    font-family:'Courier New', Courier, monospace;
+}
+
+.rainbowButtonSelector {
+    background: linear-gradient(blue, green, brown, purple,  orange);
+    color: rgb(235, 235, 235);
+}
+
+.redButtonSelector {
+    background-color: rgb(245, 50, 50);
+    
+}
+
+.buttonColorSelector {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+    height: 400px;
+}
+
+.eraseButtonContainer {
+    display: flex;
+    justify-content: center;
 }
