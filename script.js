@@ -46,6 +46,8 @@ function createFirstGrid() {
         }
     }
 
+    rainbowMode = false;
+    selectedColor = 'grey';
     initializeFirstGrid();
     handleSmallGridMouseover();
 }
@@ -82,6 +84,8 @@ function createSecondGrid() {
         }
     }
 
+    rainbowMode = false;
+    selectedColor = 'grey';
     initializeSecondGrid();
     handleMediumGridMouseover();
 
@@ -94,7 +98,7 @@ function initializeThirdGrid() {
         gridBorder.appendChild(divSquares);
     }
 
-    selectedColor = 'grey';
+    
 }
 
 function createThirdGrid() {
@@ -117,6 +121,8 @@ function createThirdGrid() {
         }
     }
 
+    rainbowMode = false;
+    selectedColor = 'grey';
     initializeThirdGrid();
     handleLargeGridMouseover();
 
@@ -136,7 +142,9 @@ function handleMediumGridButton() {
 
 function handleLargeGridButton() {
     const thirtyTwoButton = document.querySelector('.thirtyTwoButton');
-    thirtyTwoButton.addEventListener('click', createThirdGrid)
+    thirtyTwoButton.addEventListener('click', createThirdGrid);
+    selectedColor = 'grey';
+    
 }
 
 function handleSmallGridMouseover() {
@@ -235,7 +243,7 @@ function redButtonListener() {
 
 function rainbowButtonListener() {
     rainbowButtonSelector.addEventListener('click', rainbowSizeDetermination => {
-        rainbowMode = !rainbowMode;
+        rainbowMode = true;
 
     });
 }
