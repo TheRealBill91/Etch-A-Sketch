@@ -1,11 +1,17 @@
 let divSquares;
+let selectedColor = 'grey';
 let gridBorder = document.querySelector('.gridBorder');
 const sixteenButton = document.querySelector('.sixteenButton');
 const twentyFourButton = document.querySelector('.twentyFourButton');
 const thirtyTwoButton = document.querySelector('.thirtyTwoButton');
+const redButtonSelector = document.querySelector('.redButtonSelector');
+const rainbowButtonSelector = document.querySelector('.rainbowButtonSelector');
+const greenButtonSelector = document.querySelector('.greenButtonSelector')
 let divSquareTwo = document.querySelectorAll('.divSquareTwo');
 let divSquareOne = document.querySelectorAll('.divSquareOne');
 let divSquareThree = document.querySelectorAll('.divSquareThree');
+
+let rainbowMode = false;
 
 //Creates 16x16 grid
 function initializeFirstGrid() {
@@ -15,7 +21,7 @@ function initializeFirstGrid() {
         divSquares.classList.add('divSquareOne');
         gridBorder.appendChild(divSquares);
     }
-    
+
     handleSmallGridMouseover();
 
 }
@@ -40,6 +46,8 @@ function createFirstGrid() {
         }
     }
 
+    rainbowMode = false;
+    selectedColor = 'grey';
     initializeFirstGrid();
     handleSmallGridMouseover();
 }
@@ -51,6 +59,8 @@ function initializeSecondGrid() {
         divSquares.classList.add('divSquareTwo');
         gridBorder.appendChild(divSquares);
     }
+
+    selectedColor = 'grey';
 }
 
 
@@ -74,6 +84,8 @@ function createSecondGrid() {
         }
     }
 
+    rainbowMode = false;
+    selectedColor = 'grey';
     initializeSecondGrid();
     handleMediumGridMouseover();
 
@@ -85,6 +97,8 @@ function initializeThirdGrid() {
         divSquares.classList.add('divSquareThree');
         gridBorder.appendChild(divSquares);
     }
+
+    
 }
 
 function createThirdGrid() {
@@ -107,6 +121,8 @@ function createThirdGrid() {
         }
     }
 
+    rainbowMode = false;
+    selectedColor = 'grey';
     initializeThirdGrid();
     handleLargeGridMouseover();
 
@@ -126,7 +142,9 @@ function handleMediumGridButton() {
 
 function handleLargeGridButton() {
     const thirtyTwoButton = document.querySelector('.thirtyTwoButton');
-    thirtyTwoButton.addEventListener('click', createThirdGrid)
+    thirtyTwoButton.addEventListener('click', createThirdGrid);
+    selectedColor = 'grey';
+    
 }
 
 function handleSmallGridMouseover() {
@@ -140,9 +158,11 @@ function handleSmallGridMouseover() {
     }
 }
 
-function smallGridEventChange(event) {
-    let randomColor = returnRandomColor();
-    this.style.backgroundColor = randomColor;
+function smallGridEventChange() {
+    if (rainbowMode)
+        this.style.backgroundColor = returnRandomColor();
+    else
+        this.style.backgroundColor = selectedColor;
 }
 
 function handleMediumGridMouseover() {
@@ -155,39 +175,90 @@ function handleMediumGridMouseover() {
     }
 }
 
-function mediumGridEventChange(event) {
-    let randomColor = returnRandomColor();
-    this.style.backgroundColor = randomColor;
+function mediumGridEventChange() {
+    if (rainbowMode)
+        this.style.backgroundColor = returnRandomColor();
+    else
+        this.style.backgroundColor = selectedColor;
 }
 
 function handleLargeGridMouseover() {
     let divSquareThree = document.querySelectorAll('.divSquareThree');
     if (divSquareThree.length !== 0) {
-        console.log(divSquareThree.length);
         divSquareThree.forEach(divSquareThree => divSquareThree.addEventListener('mouseover', largeGridEventChange))
     } else {
         return
     }
 }
 
-function largeGridEventChange(event){
-    let randomColor = returnRandomColor();
-    this.style.backgroundColor = randomColor;
+function largeGridEventChange() {
+    if (rainbowMode)
+        this.style.backgroundColor = returnRandomColor();
+    else
+        this.style.backgroundColor = selectedColor;
+
 }
 
 
-
-
 function returnRandomColor() {
-    const varietyOfColors = ['blue', 'green', 'brown', 'purple', 'black',];
-    let randomIndex = Math.floor(Math.random() * 5);
+    const varietyOfColors = ['blue', 'green', 'brown', 'purple', 'black', 'pink', 'organge', 'yellow',];
+    let randomIndex = Math.floor(Math.random() * 8);
     return varietyOfColors[randomIndex];
+
+
+
+}
+
+function rainbowSizeDetermination() {
+    let divSquareTwo = document.querySelectorAll('.divSquareTwo');
+    let divSquareOne = document.querySelectorAll('.divSquareOne');
+
+    if (divSquareOne.length !== 0) {
+        smallGridEventChange();
+    } else if (divSquareTwo.length !== 0) {
+        mediumGridEventChange();
+    } else {
+        largeGridEventChange();
+    }
+}
+
+
+function returnRed() {
+    rainbowMode = false;
+    selectedColor = 'red';
+    return selectedColor;
+}
+
+function returnGreen() {
+    rainbowMode = false;
+    selectedColor = 'green';
+    return selectedColor;
+}
+
+
+function redButtonListener() {
+    redButtonSelector.addEventListener('click', returnRed);
+
+}
+
+function rainbowButtonListener() {
+    rainbowButtonSelector.addEventListener('click', rainbowSizeDetermination => {
+        rainbowMode = true;
+
+    });
+}
+
+function greenButtonListener() {
+    greenButtonSelector.addEventListener('click', returnGreen);
 }
 
 initializeFirstGrid();
 handleSmallGridButton();
 handleMediumGridButton();
 handleLargeGridButton();
+redButtonListener();
+rainbowButtonListener();
+greenButtonListener();
 // handleSmallGridMouseover();
 // handleMediumGridMouseover();
 
