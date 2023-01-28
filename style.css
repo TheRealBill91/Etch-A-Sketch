@@ -18,6 +18,13 @@ body {
     box-sizing: inherit;
 }
 
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 h1 {
     display: flex;
     justify-content: center;
@@ -52,6 +59,8 @@ h1 {
     margin-top: 2rem;
     gap: 24px;
     margin-top: 2rem;
+    flex: 1;
+    margin: 4rem 0rem 4rem 0rem;
 }
 
 .instructions {
@@ -153,4 +162,14 @@ h1 {
 .instructions {
     display: flex;
     justify-content: center;
+}
+
+footer {
+    height: 60px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+
 }
