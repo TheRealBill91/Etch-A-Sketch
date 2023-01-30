@@ -42,6 +42,7 @@ h1 {
     flex-wrap: wrap;
 }
 
+
 .topPageBackground {
     background-color: white;
     padding-top: 16px;
@@ -84,13 +85,15 @@ h1 {
     /* border: 1px solid grey; */
     border: 1px solid rgb(63, 63, 63);
     background-color: rgb(227, 227, 227);
+    flex: 1 1 auto;
 }
 
 .divSquareTwo {
     width: 20.67px;
-    height: 20.67px;
+    height: 20.68px;
     border: 1px solid rgb(63, 63, 63);
     background-color: rgb(227, 227, 227);
+    flex: 1 1 auto;
 }
 
 .divSquareThree {
@@ -98,6 +101,7 @@ h1 {
     height: 15.5px;
     border: 1px solid rgb(63, 63, 63);
     background-color: rgb(227, 227, 227);
+    flex: 1 1 auto;
 }
 
 .buttonGridSelectors {
