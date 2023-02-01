@@ -64,6 +64,7 @@ function initializeSecondGrid() {
 }
 
 
+
 function createSecondGrid() {
     let divSquareTwo = document.querySelectorAll('.divSquareTwo');
     let divSquareOne = document.querySelectorAll('.divSquareOne');
